@@ -24,6 +24,16 @@
         </footer>
     </div>
 
+
+    <script>
+      window.addEventListener("error", function(event) {
+        console.error("Application error:", event.message, event.error);
+      });
+      window.addEventListener("unhandledrejection", function(event) {
+        console.error("Unhandled promise rejection:", event.reason);
+      });
+    </script>
+
     <!-- Core modules -->
     <script src="js/config.js"></script>
     <script src="js/state.js"></script>
